@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aakrit Pahadi | Computer Engineering Student</title>
+    <meta name="description" content="Personal portfolio website of Aakrit Pahadi - Computer Engineering student, AI enthusiast, and web developer.">
+    <meta name="author" content="Aakrit Pahadi">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Aakrit Pahadi | Computer Engineering Student">
+    <meta property="og:description" content="Computer Engineering student interested in AI, software development, and web development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aakritpahadi.com.np">
+    <meta property="og:image" content="{{ url_for('static', filename='images/profile.jpg') }}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♟</text></svg>">
+</head>
+<body class="light-theme">
+
+    <!-- Header Navigation -->
+    <header class="site-header" id="site-header">
+        <div class="container header-container">
+            <a href="#hero" class="brand-logo">
+                <span class="logo-symbol">&lt;/&gt;</span>
+                <span class="logo-text">Aakrit Pahadi</span>
+            </a>
+
+            <div class="header-right">
+                <!-- Theme Toggle Button -->
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <span class="theme-icon moon-icon">🌙</span>
+                    <span class="theme-icon sun-icon">☀️</span>
+                </button>
+
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+                <nav class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="#hero" class="nav-link active">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#github" class="nav-link">GitHub</a></li>
+                        <li><a href="#lab" class="nav-link">Eng Lab</a></li>
+                        <li><a href="#chess" class="nav-link">Chess</a></li>
+                        <li><a href="#terminal" class="nav-link">Terminal</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-intro-badge">Hello, I'm</div>
+                    <h1 class="hero-title">Aakrit Pahadi</h1>
+                    <p class="hero-subtitle" id="typed-subtitle">Computer Engineering Student | AI Enthusiast | Web Developer</p>
+                    <p class="hero-description">
+                        Welcome to my personal website. I'm a Computer Engineering student interested in AI, software development, and building useful applications.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Contact Me</a>
+                        <a href="https://github.com/AakritPahadi" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="#chess" class="btn btn-accent">♟ Play Aakrit Chess</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="profile-frame">
+                        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Aakrit Pahadi - Profile Picture" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-image-col">
+                        <div class="about-card">
+                            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Aakrit Pahadi" class="about-img">
+                            <div class="about-card-info">
+                                <h3>Aakrit Pahadi</h3>
+                                <p>Computer Engineering Student</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-text-col">
+                        <p class="about-lead">
+                            I am a Computer Engineering student with an interest in artificial intelligence, web development, and software development. I enjoy learning new technologies and turning ideas into practical applications.
+                        </p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="info-label">Name:</span>
+                                <span class="info-value">Aakrit Pahadi</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Date of Birth:</span>
+                                <span class="info-value">2062/09/20 BS</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Address:</span>
+                                <span class="info-value">Dudhauli-9, Sindhuli, Nepal</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Education:</span>
+                                <span class="info-value">Computer Engineering Student</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email:</span>
+                                <span class="info-value">
+                                    <a href="mailto:pahadiaakrit777@gmail.com" class="link-highlight">pahadiaakrit777@gmail.com</a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="career-goal-box">
+                            <h4 class="goal-title">Career Goal</h4>
+                            <p class="goal-text">
+                                "I enjoy learning modern technologies, AI, software development, and building useful applications that solve real-world problems."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="skills-categories">
+                    <div class="skill-group">
+                        <h3 class="group-title">Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3 class="group-title">Frameworks & Web</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">React</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3 class="group-title">AI & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Artificial Intelligence</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Lab: Sorting Algorithm Visualizer -->
+        <section class="section lab-section" id="lab">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">⚡ Engineering Lab</h2>
+                    <p class="section-subtitle">Interactive Sorting Algorithm Visualizer</p>
+                    <div class="section-divider center"></div>
+                </div>
+
+                <div class="lab-wrapper">
+                    <div class="lab-toolbar">
+                        <div class="lab-control-group">
+                            <label for="algo-select">Algorithm:</label>
+                            <select id="algo-select" class="lab-select">
+                                <option value="bubble">Bubble Sort</option>
+                                <option value="selection">Selection Sort</option>
+                                <option value="insertion">Insertion Sort</option>
+                                <option value="quick">Quick Sort</option>
+                            </select>
+                        </div>
+
+                        <div class="lab-control-group">
+                            <label for="array-size">Size (15-60):</label>
+                            <input type="range" id="array-size" min="15" max="60" value="30" class="lab-range">
+                        </div>
+
+                        <div class="lab-control-group">
+                            <label for="sort-speed">Speed:</label>
+                            <input type="range" id="sort-speed" min="10" max="200" value="80" class="lab-range">
+                        </div>
+
+                        <div class="lab-buttons">
+                            <button type="button" class="btn btn-secondary btn-sm" id="btn-generate-array">🎲 Randomize</button>
+                            <button type="button" class="btn btn-primary btn-sm" id="btn-start-sort">▶ Start Sorting</button>
+                        </div>
+                    </div>
+
+                    <!-- Visualizer Canvas Container -->
+                    <div class="visualizer-container" id="visualizer-container"></div>
+
+                    <!-- Visualizer Stats -->
+                    <div class="lab-stats">
+                        <span>Comparisons: <strong id="stat-comparisons">0</strong></span>
+                        <span>Swaps: <strong id="stat-swaps">0</strong></span>
+                        <span>Status: <strong id="stat-status">Ready</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Section with Filter -->
+        <section class="section github-section" id="github">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">GitHub & Projects</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="github-card">
+                    <div class="github-info">
+                        <div class="github-user-badge">
+                            <svg class="github-icon" viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                            </svg>
+                            <div>
+                                <h3 class="github-username">AakritPahadi</h3>
+                                <p class="github-desc">My projects and coding work are available on GitHub.</p>
+                            </div>
+                        </div>
+                        <a href="https://github.com/AakritPahadi" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+                            Visit My GitHub
+                        </a>
+                    </div>
+
+                    <!-- Search / Filter Input -->
+                    <div class="repo-filter-bar">
+                        <input type="text" id="repo-search" class="repo-search-input" placeholder="🔍 Search repositories by name or tech stack...">
+                    </div>
+
+                    <!-- Repositories Grid -->
+                    <div class="repos-grid" id="repos-grid">
+                        <div class="repo-placeholder">Loading repositories...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aakrit Chess Section -->
+        <section class="section chess-section" id="chess">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">♟ Aakrit Chess</h2>
+                    <p class="section-subtitle">Challenge Aakrit's AI Chess Engine</p>
+                    <div class="section-divider center"></div>
+                </div>
+
+                <div class="chess-wrapper">
+                    <!-- Control Header & Status -->
+                    <div class="chess-top-bar">
+                        <div class="chess-status-badge" id="chess-status">
+                            <span class="status-indicator"></span>
+                            <span id="status-text">White's turn</span>
+                        </div>
+
+                        <div class="chess-difficulty-selector">
+                            <span class="difficulty-label">Difficulty:</span>
+                            <div class="difficulty-buttons">
+                                <button type="button" class="btn-diff" data-level="easy">Easy</button>
+                                <button type="button" class="btn-diff active" data-level="medium">Medium</button>
+                                <button type="button" class="btn-diff" data-level="hard">Hard</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Play Area -->
+                    <div class="chess-game-layout">
+                        <!-- Captured Pieces Sidebar -->
+                        <div class="chess-sidebar left">
+                            <div class="captured-panel">
+                                <h4>Captured by AI</h4>
+                                <div class="captured-pieces" id="captured-white"></div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Board Container -->
+                        <div class="chess-board-container">
+                            <div class="board-frame" id="board-frame">
+                                <div class="chessboard" id="chessboard"></div>
+                            </div>
+                        </div>
+
+                        <!-- Captured Pieces & Move Log -->
+                        <div class="chess-sidebar right">
+                            <div class="captured-panel">
+                                <h4>Captured by You</h4>
+                                <div class="captured-pieces" id="captured-black"></div>
+                            </div>
+                            <div class="move-log-box">
+                                <h4>Move History</h4>
+                                <div class="move-log-content" id="move-log-content">Game started.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls Bar -->
+                    <div class="chess-controls">
+                        <button type="button" class="btn btn-control" id="btn-new-game">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0020 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 004 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+                            New Game
+                        </button>
+                        <button type="button" class="btn btn-control" id="btn-undo">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/></svg>
+                            Undo Move
+                        </button>
+                        <button type="button" class="btn btn-control" id="btn-flip">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z"/></svg>
+                            Flip Board
+                        </button>
+                        <button type="button" class="btn btn-control" id="btn-copy-fen">
+                            📋 Copy FEN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Developer Terminal Section -->
+        <section class="section terminal-section" id="terminal">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">&gt;_ Interactive CLI Terminal</h2>
+                    <p class="section-subtitle">Type 'help' to see available commands</p>
+                    <div class="section-divider center"></div>
+                </div>
+
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">aakrit@portfolio:~ (bash)</div>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="term-line">Welcome to Aakrit Pahadi's Interactive Developer Terminal.</div>
+                        <div class="term-line">Type <span class="term-cmd">help</span> for available commands (e.g. about, skills, github, chess, clear).</div>
+                    </div>
+                    <div class="terminal-input-row">
+                        <span class="prompt">aakrit@portfolio:~$</span>
+                        <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command..." autocomplete="off" spellcheck="false">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visitor Community Poll Section -->
+        <section class="section poll-section" id="poll">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">📊 Community Poll</h2>
+                    <p class="section-subtitle">Which Computer Engineering domain interests you the most?</p>
+                    <div class="section-divider center"></div>
+                </div>
+
+                <div class="poll-wrapper">
+                    <div class="poll-options" id="poll-options">
+                        <button type="button" class="poll-btn" data-id="ai">🤖 Artificial Intelligence & Machine Learning</button>
+                        <button type="button" class="poll-btn" data-id="web">🌐 Modern Web & Software Development</button>
+                        <button type="button" class="poll-btn" data-id="embed">🔌 Embedded Systems & Hardware</button>
+                        <button type="button" class="poll-btn" data-id="algorithms">⚡ Data Structures & Algorithms</button>
+                    </div>
+
+                    <div class="poll-results" id="poll-results">
+                        <!-- Populated via SQLite API -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-col">
+                        <h3 class="contact-subtitle">Contact Information</h3>
+                        <p class="contact-desc">
+                            Feel free to reach out if you want to collaborate, ask questions, or just say hello!
+                        </p>
+
+                        <div class="contact-cards">
+                            <div class="contact-card">
+                                <div class="contact-icon">✉</div>
+                                <div>
+                                    <span class="card-label">Email</span>
+                                    <a href="mailto:pahadiaakrit777@gmail.com" class="card-value">pahadiaakrit777@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon">📞</div>
+                                <div>
+                                    <span class="card-label">Phone</span>
+                                    <a href="tel:97**********" class="card-value">97**********</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <span class="card-label">Address</span>
+                                    <span class="card-value">Dudhauli-9, Sindhuli, Nepal</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon">🐙</div>
+                                <div>
+                                    <span class="card-label">GitHub</span>
+                                    <a href="https://github.com/AakritPahadi" target="_blank" rel="noopener noreferrer" class="card-value">github.com/AakritPahadi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-col">
+                        <form id="contact-form" class="contact-form">
+                            <h3 class="form-title">Send a Message</h3>
+                            
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Your message..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full" id="btn-submit">Send Message</button>
+
+                            <div class="form-feedback" id="form-feedback"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll To Top Floating Button -->
+    <button type="button" class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>© 2026 Aakrit Pahadi. All rights reserved.</p>
+            <p class="footer-crafted">Made with <span class="heart">❤️</span> by Aakrit Pahadi</p>
+            <div class="footer-links">
+                <a href="https://github.com/AakritPahadi" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="mailto:pahadiaakrit777@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chess.js') }}"></script>
+</body>
+</html>
