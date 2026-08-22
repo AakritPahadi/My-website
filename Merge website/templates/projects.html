@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Projects | Aakrit Pahadi{% endblock %}
+
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <div class="section-title-tag">Software Development</div>
+        <h1 class="section-title">Featured Projects</h1>
+        <p class="section-subtitle">Applications and platforms built for web, AI, and browser gaming.</p>
+    </div>
+
+    <div class="projects-grid">
+        <div class="project-card">
+            <div>
+                <h3 class="project-title">Unified Portfolio & PAHADI Gaming</h3>
+                <p class="project-desc">A complete full-stack web application combining a personal engineering portfolio with an interactive gaming platform including 12 arcade games, Aim Lab, and Valorant guides.</p>
+                <div class="project-tech">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">HTML5/CSS3</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">SQLite</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/AakritPahadi" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem;">GitHub ↗</a>
+                <a href="/gaming" class="btn btn-primary" style="font-size:0.85rem; padding:0.4rem 0.8rem;">Live Platform</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div>
+                <h3 class="project-title">Aakrit Chess Engine</h3>
+                <p class="project-desc">Playable browser chess game featuring human vs AI gameplay driven by Python minimax algorithms and legal move position evaluation.</p>
+                <div class="project-tech">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">python-chess</span>
+                    <span class="tech-badge">Flask API</span>
+                    <span class="tech-badge">Minimax AI</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="/chess" class="btn btn-primary" style="font-size:0.85rem; padding:0.4rem 0.8rem;">Play Game &rarr;</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div>
+                <h3 class="project-title">PAHADI Aim Lab & WASM Engine</h3>
+                <p class="project-desc">5-mode aim trainer for FPS gamers measuring reaction time, flick accuracy, precision, and tracking smoothness with C++/WASM performance math routines.</p>
+                <div class="project-tech">
+                    <span class="tech-badge">C++ / WASM</span>
+                    <span class="tech-badge">HTML5 Canvas</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="/gaming/aim-lab" class="btn btn-purple" style="font-size:0.85rem; padding:0.4rem 0.8rem;">Train Aim &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

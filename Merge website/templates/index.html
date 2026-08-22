@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}Aakrit Pahadi | Personal Portfolio & PAHADI Gaming{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero-section container">
+    <div class="hero-text-content">
+        <span class="hero-subtitle">Hello, I'm</span>
+        <h1 class="hero-heading">Aakrit Pahadi</h1>
+        <h2 class="hero-role-title">Computer Engineering Student | AI Enthusiast | Web Developer</h2>
+        <p class="hero-description">
+            Welcome to my personal website. I'm a Computer Engineering student interested in AI, software development, web development, and building useful applications.
+        </p>
+        <div class="hero-actions">
+            <a href="/projects" class="btn btn-primary">Explore My Work</a>
+            <a href="https://github.com/AakritPahadi" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub ↗</a>
+            <a href="/gaming" class="btn btn-purple">Enter PAHADI Gaming 🎮</a>
+        </div>
+    </div>
+    <div class="hero-image-wrapper">
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Aakrit Pahadi Profile" class="hero-profile-img">
+    </div>
+</section>
+
+<!-- ABOUT SECTION PREVIEW -->
+<section class="page-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-title-tag">Get to know me</div>
+            <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-card">
+                <p style="font-size:1.05rem; color:var(--text-muted); line-height:1.7;">
+                    I am a Computer Engineering student with an interest in artificial intelligence, web development, and software development. I enjoy learning new technologies and turning ideas into practical applications.
+                </p>
+                <div style="margin-top:1.5rem;">
+                    <a href="/about" class="btn btn-secondary">Read Full Profile &rarr;</a>
+                </div>
+            </div>
+            <div class="about-card">
+                <dl class="about-details-list">
+                    <dt>Name:</dt><dd>Aakrit Pahadi</dd>
+                    <dt>Education:</dt><dd>Computer Engineering Student</dd>
+                    <dt>Address:</dt><dd>Dudhauli-9, Sindhuli, Nepal</dd>
+                    <dt>Email:</dt><dd><a href="mailto:pahadiaakrit777@gmail.com" style="color:var(--accent-blue);">pahadiaakrit777@gmail.com</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS PREVIEW -->
+<section class="page-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-title-tag">Technologies & Tools</div>
+            <h2 class="section-title">Skills</h2>
+        </div>
+        <div class="skills-grid">
+            <span class="skill-tag">🐍 Python</span>
+            <span class="skill-tag">⚡ C++</span>
+            <span class="skill-tag">☕ Java</span>
+            <span class="skill-tag">🌐 Django</span>
+            <span class="skill-tag">🔥 Flask</span>
+            <span class="skill-tag">⚛️ React</span>
+            <span class="skill-tag">🎨 HTML5 / CSS3</span>
+            <span class="skill-tag">💛 JavaScript</span>
+            <span class="skill-tag">🗄️ SQL</span>
+            <span class="skill-tag">📦 Git</span>
+            <span class="skill-tag">🤖 Artificial Intelligence</span>
+            <span class="skill-tag">🧠 Machine Learning</span>
+        </div>
+    </div>
+</section>
+
+<!-- AAKRIT CHESS PREVIEW -->
+<section class="page-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-title-tag">Interactive Feature</div>
+            <h2 class="section-title">♟ Aakrit Chess</h2>
+            <p class="section-subtitle">Challenge Aakrit's AI Chess Engine right in your browser.</p>
+        </div>
+        <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-lg); padding:2rem; text-align:center;">
+            <p style="color:var(--text-muted); margin-bottom:1.5rem;">Built with Python and custom Minimax move evaluation algorithms.</p>
+            <a href="/chess" class="btn btn-primary">Play Chess Against AI &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- MAJOR TRANSITION TO PAHADI GAMING -->
+<section class="page-section" style="background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.12), transparent 70%);">
+    <div class="container" style="text-align:center;">
+        <div class="section-title-tag" style="color:var(--accent-purple);">Gaming World</div>
+        <h2 class="section-title" style="font-size:2.5rem; margin-bottom:0.5rem;">ENTER PAHADI GAMING</h2>
+        <div style="font-size:1.15rem; font-weight:700; color:var(--accent-purple); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1rem;">
+            Play. Compete. Learn. Connect.
+        </div>
+        <p style="max-width:650px; margin:0 auto 2rem; color:var(--text-muted); line-height:1.7;">
+            Welcome to PAHADI Gaming — a gaming platform built around browser games, aim training, Valorant learning, challenges, and the Piditverse community.
+        </p>
+        <a href="/gaming" class="btn btn-purple" style="font-size:1.1rem; padding:0.9rem 2.2rem;">
+            ENTER PAHADI GAMING 🎮
+        </a>
+    </div>
+</section>
+{% endblock %}

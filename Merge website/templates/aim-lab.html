@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}PAHADI AIM LAB | Train Reaction, Accuracy & Speed{% endblock %}
+
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <div class="section-title-tag">Aim & Reflex Training</div>
+        <h1 class="section-title">PAHADI AIM LAB</h1>
+        <p class="section-subtitle">Train your reaction, accuracy and speed.</p>
+    </div>
+
+    <div class="aim-lab-dashboard">
+        <!-- MODE SELECTOR -->
+        <div class="aim-mode-selector">
+            <button class="btn-aim-mode active" data-mode="reaction">1. Reaction Shot</button>
+            <button class="btn-aim-mode" data-mode="flick">2. Flick Training</button>
+            <button class="btn-aim-mode" data-mode="precision">3. Precision</button>
+            <button class="btn-aim-mode" data-mode="speed">4. Speed</button>
+            <button class="btn-aim-mode" data-mode="tracking">5. Target Tracking</button>
+        </div>
+
+        <!-- LIVE HUD STATS -->
+        <div class="aim-lab-hud">
+            <div class="hud-box">
+                <label>SCORE</label>
+                <div class="hud-val" id="aimScore">0</div>
+            </div>
+            <div class="hud-box">
+                <label>ACCURACY</label>
+                <div class="hud-val" id="aimAccuracy" style="color:var(--accent-green);">100%</div>
+            </div>
+            <div class="hud-box">
+                <label>REACTION TIME</label>
+                <div class="hud-val" id="aimReaction" style="color:var(--accent-purple);">0ms</div>
+            </div>
+            <div class="hud-box">
+                <label>PERFORMANCE RATING</label>
+                <div class="hud-val" id="aimRating" style="color:var(--accent-pink); font-size:1.1rem;">Unranked</div>
+            </div>
+        </div>
+
+        <!-- CANVAS WORKSPACE -->
+        <div class="aim-canvas-wrapper">
+            <canvas id="aimCanvas"></canvas>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1.5rem; flex-wrap:wrap; gap:1rem;">
+            <button class="btn btn-purple" id="startAimBtn">Start Aim Training</button>
+            <span style="font-size:0.85rem; color:var(--text-muted);">Powered by C++/WASM calculation engine routines</span>
+        </div>
+    </div>
+</section>
+{% endblock %}

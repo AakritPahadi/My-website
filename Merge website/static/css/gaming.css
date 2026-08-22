@@ -1,0 +1,511 @@
+/*
+ * PAHADI Gaming Platform Styles
+ * Theme accents: Purple (#8B5CF6), Pink (#EC4899), Violet (#7C3AED), Orange (#F97316)
+ */
+
+/* --- GAMING HERO SECTION --- */
+.gaming-hero {
+  padding: 4rem 0 3.5rem;
+  background: radial-gradient(circle at 50% 20%, rgba(139, 92, 246, 0.15), transparent 70%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gaming-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.gaming-brand-artwork {
+  width: 100%;
+  max-width: 500px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--accent-purple);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3);
+  margin-bottom: 2rem;
+  transition: transform var(--transition-slow);
+}
+
+.gaming-brand-artwork:hover {
+  transform: scale(1.02);
+}
+
+.gaming-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff, #e9d5ff, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.gaming-tagline {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-purple);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.gaming-description {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.gaming-hero-actions {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* --- QUICK ACCESS GRID --- */
+.quick-access-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.quick-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.quick-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-purple);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2);
+}
+
+.quick-card-icon {
+  font-size: 2.5rem;
+}
+
+.quick-card h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+}
+
+.quick-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* --- PAHADI ARCADE GAMES GRID --- */
+.arcade-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.game-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card:hover {
+  border-color: var(--accent-purple);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.2);
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.game-icon {
+  font-size: 2rem;
+}
+
+.game-difficulty-badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.badge-easy { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+.badge-medium { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+.badge-hard { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+
+.game-title {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.game-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.game-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.game-best-score {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.game-best-score span {
+  color: var(--accent-purple);
+  font-weight: 700;
+}
+
+/* --- GAME PLAY MODAL & CONTAINERS --- */
+.game-play-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  max-width: 650px;
+  width: 95%;
+  box-shadow: var(--shadow-lg);
+  margin: 0 auto;
+}
+
+.game-viewport-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* --- AIM LAB HUD & CANVAS --- */
+.aim-lab-dashboard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.aim-mode-selector {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-aim-mode {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn-aim-mode.active {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-violet));
+  color: #ffffff;
+  border-color: var(--accent-purple);
+}
+
+.aim-lab-hud {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hud-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.hud-box label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.hud-box .hud-val {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.aim-canvas-wrapper {
+  width: 100%;
+  height: 440px;
+  background-color: #050608;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+#aimCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* --- VALORANT HUB STYLES --- */
+.valorant-profile-card {
+  background: linear-gradient(135deg, #1e1f2e, #141522);
+  border: 1px solid #ff4655; /* Valorant Red */
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 30px rgba(255, 70, 85, 0.15);
+}
+
+.valorant-id-copy-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 70, 85, 0.3);
+}
+
+.btn-copy-val-id {
+  background-color: #ff4655;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.btn-copy-val-id:hover {
+  background-color: #e03e4c;
+}
+
+.valorant-tabs {
+  display: flex;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.val-tab-btn {
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.val-tab-btn.active {
+  color: #ff4655;
+  border-bottom-color: #ff4655;
+}
+
+.guide-expand-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.guide-expand-header {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: var(--bg-card);
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.guide-expand-header:hover {
+  background-color: var(--bg-surface);
+}
+
+.guide-expand-body {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+  display: none;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.guide-expand-card.active .guide-expand-body {
+  display: block;
+}
+
+/* --- PIDITVERSE COMMUNITY --- */
+.piditverse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.member-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.member-card:hover {
+  border-color: var(--accent-purple);
+  transform: translateY(-4px);
+}
+
+.member-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+/* --- MOMENTS & MEMES GALLERY --- */
+.moments-upload-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.moment-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.moment-media {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-color: #000;
+}
+
+.moment-info {
+  padding: 1.25rem;
+}
+
+.moment-title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.moment-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* --- LEADERBOARD & STATS TABLE --- */
+.leaderboard-table-wrapper {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.leaderboard-table th {
+  background-color: var(--bg-surface);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.leaderboard-table tr:hover {
+  background-color: var(--bg-surface);
+}
+
+.rank-badge {
+  font-weight: 800;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rank-1 { background-color: #f59e0b; color: #000000; }
+.rank-2 { background-color: #94a3b8; color: #000000; }
+.rank-3 { background-color: #b45309; color: #ffffff; }

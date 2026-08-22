@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Skills | Aakrit Pahadi{% endblock %}
+
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <div class="section-title-tag">Technical Competencies</div>
+        <h1 class="section-title">Skills & Technologies</h1>
+        <p class="section-subtitle">Programming languages, frameworks, databases, and core software engineering disciplines.</p>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:2rem;">
+        <div class="about-card">
+            <h3 style="font-size:1.2rem; color:var(--accent-blue); margin-bottom:1rem;">Programming Languages & Core Stack</h3>
+            <div class="skills-grid">
+                <span class="skill-tag">🐍 Python</span>
+                <span class="skill-tag">⚡ C++</span>
+                <span class="skill-tag">☕ Java</span>
+                <span class="skill-tag">🎨 HTML5</span>
+                <span class="skill-tag">🎨 CSS3</span>
+                <span class="skill-tag">💛 JavaScript</span>
+                <span class="skill-tag">🗄️ SQL</span>
+            </div>
+        </div>
+
+        <div class="about-card">
+            <h3 style="font-size:1.2rem; color:var(--accent-purple); margin-bottom:1rem;">Frameworks & Web Development</h3>
+            <div class="skills-grid">
+                <span class="skill-tag">🔥 Flask</span>
+                <span class="skill-tag">🌐 Django</span>
+                <span class="skill-tag">⚛️ React</span>
+            </div>
+        </div>
+
+        <div class="about-card">
+            <h3 style="font-size:1.2rem; color:var(--accent-pink); margin-bottom:1rem;">Specializations & Tools</h3>
+            <div class="skills-grid">
+                <span class="skill-tag">🤖 Artificial Intelligence</span>
+                <span class="skill-tag">🧠 Machine Learning</span>
+                <span class="skill-tag">📦 Git & Version Control</span>
+                <span class="skill-tag">🧩 WebAssembly (WASM)</span>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

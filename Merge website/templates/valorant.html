@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}LEARN TO PLAY VALORANT | Tactical Guides & Quiz{% endblock %}
+
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <div class="section-title-tag">Valorant Learning Hub</div>
+        <h1 class="section-title">LEARN TO PLAY VALORANT</h1>
+        <p class="section-subtitle">Improve your game, one round at a time.</p>
+    </div>
+
+    <!-- PAHADI VALORANT PROFILE CARD -->
+    <div class="valorant-profile-card">
+        <div>
+            <h2 style="font-size:1.8rem; color:#fff; margin-bottom:0.25rem;">PAHADI</h2>
+            <p style="color:#ff4655; font-weight:600; margin-bottom:1rem;">Gaming Enthusiast</p>
+            <div style="font-size:0.95rem; color:var(--text-muted); display:flex; gap:1.5rem; flex-wrap:wrap;">
+                <span>Discord: <strong style="color:#fff;">pahadi_7</strong></span>
+                <span>Instagram: <strong style="color:#fff;">pahadiyt_77</strong></span>
+                <span>YouTube: <strong style="color:#fff;">PAHADI YT</strong></span>
+            </div>
+        </div>
+        <div class="valorant-id-copy-box">
+            <div>
+                <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Valorant ID</div>
+                <div style="font-weight:800; font-size:1.2rem; color:#fff;">PAHADI#GMR</div>
+            </div>
+            <button class="btn-copy-val-id" id="copyValIdBtn">COPY VALORANT ID</button>
+        </div>
+    </div>
+
+    <!-- VALORANT TABS -->
+    <div class="valorant-tabs">
+        <button class="val-tab-btn active" data-val-category="all">Tactical Guides</button>
+        <button class="val-tab-btn" data-val-category="agents">Agent Guides</button>
+        <button class="val-tab-btn" data-val-category="lineups">Lineup Lab</button>
+        <button class="val-tab-btn" data-val-category="maps">Map Lab</button>
+        <button class="val-tab-btn" data-val-category="weapons">Weapon Guide</button>
+        <button class="val-tab-btn" data-val-category="quiz">Knowledge Quiz</button>
+    </div>
+
+    <!-- TACTICAL GUIDES (EXPANDABLE) -->
+    <div data-val-group="all">
+        <h3 style="font-size:1.4rem; color:#fff; margin-bottom:1.5rem;">Core Tactical Fundamentals</h3>
+        
+        <div class="guide-expand-card">
+            <div class="guide-expand-header">
+                <span>🎯 Crosshair Placement & Pre-aiming</span>
+                <span>▼</span>
+            </div>
+            <div class="guide-expand-body">
+                Keep your crosshair at head height at all times. Anticipate where enemy heads will appear when peeking angles to minimize reaction time.
+            </div>
+        </div>
+
+        <div class="guide-expand-card">
+            <div class="guide-expand-header">
+                <span>🏃 Counter-strafing & Movement</span>
+                <span>▼</span>
+            </div>
+            <div class="guide-expand-body">
+                Tap the opposite movement key (e.g. D when moving left with A) to instantly come to a complete stop for 100% weapon accuracy before firing.
+            </div>
+        </div>
+
+        <div class="guide-expand-card">
+            <div class="guide-expand-header">
+                <span>👁️ Peeking & Jiggle Peeking</span>
+                <span>▼</span>
+            </div>
+            <div class="guide-expand-body">
+                Use fast jiggle peeks to bait out enemy operator shots and gather information safely before committing to a wide swing.
+            </div>
+        </div>
+
+        <div class="guide-expand-card">
+            <div class="guide-expand-header">
+                <span>💰 Economy & Utility Usage</span>
+                <span>▼</span>
+            </div>
+            <div class="guide-expand-body">
+                Coordinate eco buys, half buys, and full buys with your team. Never buy alone while the rest of your team saves.
+            </div>
+        </div>
+    </div>
+
+    <!-- AGENT GUIDES -->
+    <div data-val-group="agents" style="display:none;">
+        <h3 style="font-size:1.4rem; color:#fff; margin-bottom:1.5rem;">Agent Masterclasses</h3>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h4 style="color:#ff4655; font-size:1.2rem;">Jett (Duelist)</h4>
+                <p style="color:var(--text-muted); margin:0.5rem 0;">High-mobility entry fragger. Use Tailwind dash to escape after aggressive operator shots.</p>
+            </div>
+            <div class="project-card">
+                <h4 style="color:#3b82f6; font-size:1.2rem;">Sova (Initiator)</h4>
+                <p style="color:var(--text-muted); margin:0.5rem 0;">Recon specialist. Master lineup arrows to reveal defender positions before site pushes.</p>
+            </div>
+            <div class="project-card">
+                <h4 style="color:#8b5cf6; font-size:1.2rem;">Omen (Controller)</h4>
+                <p style="color:var(--text-muted); margin:0.5rem 0;">Shadow smoker and teleporter. Block enemy sightlines and take unexpected high-ground angles.</p>
+            </div>
+            <div class="project-card">
+                <h4 style="color:#10b981; font-size:1.2rem;">Killjoy (Sentinel)</h4>
+                <p style="color:var(--text-muted); margin:0.5rem 0;">Defense specialist. Deploy Turret and Alarmbot setups to hold sites solo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- LINEUP LAB -->
+    <div data-val-group="lineups" style="display:none;">
+        <h3 style="font-size:1.4rem; color:#fff; margin-bottom:1.5rem;">Lineup Lab</h3>
+        <div class="project-card">
+            <h4>Haven - Sova A-Site Recon Arrow</h4>
+            <p style="color:var(--text-muted);">Stand at Long A lobby, bounce 1 charge to reveal site heaven and back site.</p>
+        </div>
+    </div>
+
+    <!-- MAP LAB -->
+    <div data-val-group="maps" style="display:none;">
+        <h3 style="font-size:1.4rem; color:#fff; margin-bottom:1.5rem;">Map Tactical Overviews</h3>
+        <div class="projects-grid">
+            <div class="project-card"><h4>Ascent</h4><p>Control Mid to dictate site attacks and defender rotates.</p></div>
+            <div class="project-card"><h4>Bind</h4><p>Utilize teleporters for fast rotation and surprise executes.</p></div>
+            <div class="project-card"><h4>Haven</h4><p>3-site map requiring disciplined rotations and utility saves.</p></div>
+        </div>
+    </div>
+
+    <!-- WEAPON GUIDE -->
+    <div data-val-group="weapons" style="display:none;">
+        <h3 style="font-size:1.4rem; color:#fff; margin-bottom:1.5rem;">Arsenal Breakdown</h3>
+        <div class="leaderboard-table-wrapper">
+            <table class="leaderboard-table">
+                <thead>
+                    <tr><th>Weapon</th><th>Category</th><th>Cost</th><th>Best Use Case</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Vandal</td><td>Rifle</td><td>2900</td><td>One-shot headshot at any range</td></tr>
+                    <tr><td>Phantom</td><td>Rifle</td><td>2900</td><td>Close-range spray & smoke spamming</td></tr>
+                    <tr><td>Operator</td><td>Sniper</td><td>4700</td><td>Holding long sightlines on defense</td></tr>
+                    <tr><td>Spectre</td><td>SMG</td><td>1600</td><td>Anti-eco rounds & run-and-gun peeks</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- KNOWLEDGE QUIZ -->
+    <div data-val-group="quiz" style="display:none;">
+        <h3 style="font-size:1.4rem; color:#fff; margin-bottom:1.5rem;">Valorant Knowledge Test</h3>
+        <div id="valorantQuizContainer" style="max-width:560px; margin:0 auto;"></div>
+    </div>
+</section>
+{% endblock %}

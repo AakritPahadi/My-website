@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}WELCOME TO PAHADI GAMING | Play. Compete. Learn. Connect.{% endblock %}
+
+{% block content %}
+<!-- GAMING HERO SECTION -->
+<section class="gaming-hero">
+    <div class="container gaming-hero-content">
+        <img src="{{ url_for('static', filename='images/pahadi-logo.jpg') }}" alt="PAHADI Gaming Logo Artwork" class="gaming-brand-artwork">
+        <h1 class="gaming-title">WELCOME TO PAHADI GAMING</h1>
+        <div class="gaming-tagline">Play. Compete. Learn. Connect.</div>
+        <p class="gaming-description">
+            Play fun browser games, improve your Valorant skills, share your best gaming moments and connect with our community on the PahadiYT Discord Server.
+        </p>
+        <div class="gaming-hero-actions">
+            <a href="/gaming/arcade" class="btn btn-purple">PLAY GAMES 🕹️</a>
+            <a href="https://discord.gg/UtU84g9vDP" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">JOIN PAHADIYT DISCORD SERVER 💬</a>
+        </div>
+    </div>
+</section>
+
+<!-- QUICK ACCESS GRID -->
+<section class="page-section container">
+    <div class="section-header">
+        <div class="section-title-tag">Platform Features</div>
+        <h2 class="section-title">PAHADI GAMING QUICK ACCESS</h2>
+    </div>
+
+    <div class="quick-access-grid">
+        <a href="/gaming/arcade" class="quick-card">
+            <div class="quick-card-icon">🕹️</div>
+            <h3>PAHADI ARCADE</h3>
+            <p>"Play browser games"</p>
+        </a>
+
+        <a href="/gaming/aim-lab" class="quick-card">
+            <div class="quick-card-icon">🎯</div>
+            <h3>PAHADI AIM LAB</h3>
+            <p>"Test your aim and reaction"</p>
+        </a>
+
+        <a href="/gaming/daily-challenge" class="quick-card">
+            <div class="quick-card-icon">⚡</div>
+            <h3>DAILY CHALLENGE</h3>
+            <p>"Beat today's challenge"</p>
+        </a>
+
+        <a href="/gaming/piditverse" class="quick-card">
+            <div class="quick-card-icon">👥</div>
+            <h3>PIDITVERSE</h3>
+            <p>"Join the community"</p>
+        </a>
+
+        <a href="/gaming/pahadiyt" class="quick-card">
+            <div class="quick-card-icon">💬</div>
+            <h3>PAHADIYT SERVER</h3>
+            <p>"Discord Server Members & Roles"</p>
+        </a>
+    </div>
+</section>
+{% endblock %}

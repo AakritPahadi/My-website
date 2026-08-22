@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Aakrit Pahadi | Computer Engineering Student & PAHADI Gaming{% endblock %}</title>
+    <meta name="description" content="Aakrit Pahadi's personal website featuring his development work, AI interests, GitHub projects, Aakrit Chess, PAHADI Gaming, browser games, Valorant learning and the Piditverse community.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/profile.jpg') }}" type="image/jpeg">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gaming.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="{% if '/gaming' in request.path %}gaming-theme{% else %}personal-theme{% endif %}">
+
+    <!-- GLOBAL STICKY NAVIGATION -->
+    <header class="header-nav">
+        <div class="container">
+            <a href="/" class="nav-brand" id="brandLogo">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Aakrit Pahadi" class="logo-img">
+                <span>Aakrit Pahadi</span>
+                <span class="brand-badge">PAHADI</span>
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="/" class="nav-link {% if request.path == '/' %}active{% endif %}">HOME</a></li>
+                    <li><a href="/about" class="nav-link {% if request.path == '/about' %}active{% endif %}">ABOUT</a></li>
+                    <li><a href="/skills" class="nav-link {% if request.path == '/skills' %}active{% endif %}">SKILLS</a></li>
+                    <li><a href="/projects" class="nav-link {% if request.path == '/projects' %}active{% endif %}">PROJECTS</a></li>
+                    <li><a href="/github" class="nav-link {% if request.path == '/github' %}active{% endif %}">GITHUB</a></li>
+                    <li><a href="/chess" class="nav-link {% if request.path == '/chess' %}active{% endif %}">CHESS</a></li>
+                    <li><a href="/gaming" class="nav-link gaming-link {% if '/gaming' in request.path %}active{% endif %}">PAHADI GAMING</a></li>
+                    <li><a href="/contact" class="nav-link {% if request.path == '/contact' %}active{% endif %}">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <a href="/gaming" class="btn-play-now">
+                <span>🎮</span> PLAY NOW
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE DRAWER MENU -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a href="/" class="nav-link">HOME</a>
+        <a href="/about" class="nav-link">ABOUT</a>
+        <a href="/skills" class="nav-link">SKILLS</a>
+        <a href="/projects" class="nav-link">PROJECTS</a>
+        <a href="/github" class="nav-link">GITHUB</a>
+        <a href="/chess" class="nav-link">CHESS</a>
+        <a href="/gaming" class="nav-link gaming-link">PAHADI GAMING</a>
+        <a href="/contact" class="nav-link">CONTACT</a>
+        <a href="/gaming" class="btn btn-purple" style="margin-top:1rem;">PLAY NOW 🎮</a>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- SECONDARY GAMING SUBNAV (Displayed inside /gaming routes) -->
+    {% if '/gaming' in request.path %}
+    <div class="gaming-subnav">
+        <div class="container">
+            <ul class="gaming-subnav-list">
+                <li class="gaming-subnav-item"><a href="/gaming" class="{% if request.path == '/gaming' %}active{% endif %}">🏠 HOME</a></li>
+                <li class="gaming-subnav-item"><a href="/gaming/arcade" class="{% if request.path == '/gaming/arcade' %}active{% endif %}">🕹️ ARCADE</a></li>
+                <li class="gaming-subnav-item"><a href="/gaming/aim-lab" class="{% if request.path == '/gaming/aim-lab' %}active{% endif %}">🎯 AIM LAB</a></li>
+                <li class="gaming-subnav-item"><a href="/gaming/daily-challenge" class="{% if request.path == '/gaming/daily-challenge' %}active{% endif %}">⚡ DAILY CHALLENGE</a></li>
+                <li class="gaming-subnav-item"><a href="/gaming/valorant" class="{% if request.path == '/gaming/valorant' %}active{% endif %}">🔥 VALORANT</a></li>
+                <li class="gaming-subnav-item"><a href="/gaming/piditverse" class="{% if request.path == '/gaming/piditverse' %}active{% endif %}">👥 PIDITVERSE</a></li>
+                <li class="gaming-subnav-item"><a href="/gaming/pahadiyt" class="{% if request.path == '/gaming/pahadiyt' %}active{% endif %}">💬 PAHADIYT SERVER</a></li>
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- MAIN CONTENT -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- MAIN FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Aakrit Pahadi & PAHADI Gaming</h3>
+                    <p>Computer Engineering Student | AI Enthusiast | Web Developer | Gamer</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Personal</h4>
+                    <ul>
+                        <li><a href="/about">About Me</a></li>
+                        <li><a href="/skills">Skills</a></li>
+                        <li><a href="/projects">Projects</a></li>
+                        <li><a href="/chess">Aakrit Chess</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Gaming & Social</h4>
+                    <ul>
+                        <li><a href="/gaming/arcade">Arcade Games</a></li>
+                        <li><a href="/gaming/aim-lab">Aim Lab</a></li>
+                        <li><a href="/gaming/valorant">Valorant Hub</a></li>
+                        <li><a href="/gaming/piditverse">Piditverse Community</a></li>
+                        <li><a href="/gaming/pahadiyt">PahadiYT Server Members</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aakrit Pahadi. All rights reserved. Operating under aakritpahadi.com.np</p>
+                <div style="display:flex; gap:1rem;">
+                    <a href="https://instagram.com/pahadiyt_77" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://youtube.com/@pahadiyt77" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <a href="https://discord.gg/UtU84g9vDP" target="_blank" rel="noopener noreferrer">PahadiYT Discord</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INSTAGRAM QR MODAL -->
+    <div class="modal" id="qrModal">
+        <div class="modal-card" style="text-align:center;">
+            <button class="modal-close-btn" onclick="closeQrModal()">&times;</button>
+            <h3 style="font-size:1.5rem; color:var(--text-heading); margin-bottom:0.5rem;">FOLLOW PAHADI</h3>
+            <p style="color:var(--text-muted); margin-bottom:1.5rem;">Scan to follow me on Instagram (@pahadiyt_77)</p>
+            <img src="{{ url_for('static', filename='images/instagram-qr.png') }}" alt="Instagram QR Code" style="width:240px; height:240px; margin:0 auto 1.5rem; border-radius:12px; border:2px solid var(--accent-purple);">
+            <a href="https://www.instagram.com/pahadiyt_77" target="_blank" rel="noopener noreferrer" class="btn btn-purple">Open Instagram Directly</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chess.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/arcade.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/aim-lab.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/valorant.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/leaderboard.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

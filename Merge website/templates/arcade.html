@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}PAHADI ARCADE | Play Browser Games{% endblock %}
+
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <div class="section-title-tag">Browser Gaming Suite</div>
+        <h1 class="section-title">PAHADI ARCADE</h1>
+        <p class="section-subtitle">Take a break. Pick a game. Have fun.</p>
+    </div>
+
+    <!-- 8 ARCADE GAMES GRID -->
+    <div class="arcade-grid">
+        <!-- 1. Flappy Pahadi -->
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-icon">🕊️</span>
+                <span class="game-difficulty-badge badge-hard">Featured</span>
+            </div>
+            <h3 class="game-title">Flappy Pahadi</h3>
+            <p class="game-desc">Original Flappy Bird arcade game with physics pipes & flap jump controls.</p>
+            <div class="game-footer">
+                <span class="game-best-score">Category: <span>Arcade</span></span>
+                <button class="btn btn-purple" data-play-game="flappy">Play Game</button>
+            </div>
+        </div>
+
+        <!-- 2. Aim Trainer -->
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-icon">🎯</span>
+                <span class="game-difficulty-badge badge-medium">FPS</span>
+            </div>
+            <h3 class="game-title">Aim Trainer</h3>
+            <p class="game-desc">Click moving targets to improve target acquisition speed.</p>
+            <div class="game-footer">
+                <span class="game-best-score">Category: <span>Reflex</span></span>
+                <button class="btn btn-purple" data-play-game="aim">Play Game</button>
+            </div>
+        </div>
+
+        <!-- 3. Tic Tac Toe -->
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-icon">❌⭕</span>
+                <span class="game-difficulty-badge badge-easy">Casual</span>
+            </div>
+            <h3 class="game-title">Tic Tac Toe</h3>
+            <p class="game-desc">Play 2-player or vs AI with Easy/Medium difficulty levels.</p>
+            <div class="game-footer">
+                <span class="game-best-score">Category: <span>Strategy</span></span>
+                <button class="btn btn-purple" data-play-game="tictactoe">Play Game</button>
+            </div>
+        </div>
+
+        <!-- 4. Reaction Test -->
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-icon">⚡</span>
+                <span class="game-difficulty-badge badge-hard">Speed</span>
+            </div>
+            <h3 class="game-title">Reaction Test</h3>
+            <p class="game-desc">Test your visual reflexes in milliseconds with rating feedback.</p>
+            <div class="game-footer">
+                <span class="game-best-score">Category: <span>Reflex</span></span>
+                <button class="btn btn-purple" data-play-game="reaction">Play Game</button>
+            </div>
+        </div>
+
+        <!-- 5. Rock Paper Scissors -->
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-icon">✊✋✌️</span>
+                <span class="game-difficulty-badge badge-easy">Quick</span>
+            </div>
+            <h3 class="game-title">Rock Paper Scissors</h3>
+            <p class="game-desc">Best-of-5 match mode against the computer.</p>
+            <div class="game-footer">
+                <span class="game-best-score">Category: <span>Casual</span></span>
+                <button class="btn btn-purple" data-play-game="rps">Play Game</button>
+            </div>
+        </div>
+
+        <!-- 6. Memory Match -->
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-icon">🃏</span>
+                <span class="game-difficulty-badge badge-easy">Memory</span>
+            </div>
+            <h3 class="game-title">Memory Match</h3>
+            <p class="game-desc">Flip cards and test your memory matching pairs.</p>
+            <div class="game-footer">
+                <span class="game-best-score">Category: <span>Card</span></span>
+                <button class="btn btn-purple" data-play-game="memory">Play Game</button>
+            </div>
+        </div>
+
+        <!-- 7. Number Guessing -->
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-icon">🔢</span>
+                <span class="game-difficulty-badge badge-easy">Logic</span>
+            </div>
+            <h3 class="game-title">Number Guessing</h3>
+            <p class="game-desc">Guess the secret number with Higher/Lower hints.</p>
+            <div class="game-footer">
+                <span class="game-best-score">Category: <span>Casual</span></span>
+                <button class="btn btn-purple" data-play-game="number">Play Game</button>
+            </div>
+        </div>
+
+        <!-- 8. Minesweeper -->
+        <div class="game-card">
+            <div class="game-header">
+                <span class="game-icon">💣</span>
+                <span class="game-difficulty-badge badge-hard">Hard</span>
+            </div>
+            <h3 class="game-title">Minesweeper</h3>
+            <p class="game-desc">Uncover safe tiles without detonating hidden mines.</p>
+            <div class="game-footer">
+                <span class="game-best-score">Category: <span>Logic</span></span>
+                <button class="btn btn-purple" data-play-game="minesweeper">Play Game</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GAME PLAY MODAL -->
+<div class="modal" id="gamePlayModal">
+    <div class="game-play-card" style="position:relative;">
+        <button class="modal-close-btn" id="gameModalClose">&times;</button>
+        <h3 id="gameModalTitle" style="font-size:1.5rem; color:#fff; text-align:center;">Play Game</h3>
+        <div id="gameViewportContainer" class="game-viewport-container"></div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,112 @@
+/*
+ * Responsive Media Queries
+ * Breakpoints: 1200px, 1024px, 768px, 480px
+ */
+
+@media (max-width: 1024px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-text-content {
+    align-items: center;
+  }
+  
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chess-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .chess-board-wrapper {
+    width: 100%;
+  }
+  
+  .chess-board {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu, .btn-play-now {
+    display: none;
+  }
+  
+  .hamburger-btn {
+    display: flex;
+  }
+  
+  .hero-heading {
+    font-size: 2.2rem;
+  }
+  
+  .gaming-title {
+    font-size: 2.4rem;
+  }
+  
+  .gaming-brand-artwork {
+    height: 180px;
+  }
+  
+  .aim-lab-hud {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .aim-canvas-wrapper {
+    height: 320px;
+  }
+  
+  .valorant-profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .github-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-heading {
+    font-size: 1.8rem;
+  }
+  
+  .hero-profile-img {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .chess-board {
+    max-width: 320px;
+    height: 320px;
+  }
+  
+  .square {
+    font-size: 1.8rem;
+  }
+  
+  .aim-canvas-wrapper {
+    height: 280px;
+  }
+}
